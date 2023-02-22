@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/TxtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/miscelanea_alberto"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/editTextNumber"
+        android:textAlignment="viewEnd"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumber2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/TxtOperando1"
+        app:layout_constraintTop_toBottomOf="@+id/TxtTitulo"
+        app:layout_constraintVertical_bias="0.5"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/editTextNumber2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/editTextNumber2"
+        android:textAlignment="viewEnd"
+        app:layout_constraintBottom_toTopOf="@+id/TxtResultado1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/TxtOperando2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
+        app:layout_constraintVertical_bias="0.5"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/TxtOperando1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/operando1"
+        app:layout_constraintBottom_toTopOf="@+id/TxtOperando2"
+        app:layout_constraintEnd_toStartOf="@+id/editTextNumber"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TxtTitulo"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/TxtOperando2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/operando_2"
+        app:layout_constraintBottom_toTopOf="@+id/TxtResultado1"
+        app:layout_constraintEnd_toStartOf="@+id/editTextNumber2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TxtOperando1"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/TxtResultado1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/resultado"
+        app:layout_constraintBottom_toTopOf="@+id/BtnFibonacci"
+        app:layout_constraintEnd_toStartOf="@+id/TxtResultado2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/TxtResultado2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Resultado2"
+        app:layout_constraintBottom_toTopOf="@+id/BtnFactorial"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TxtResultado1"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2"
+        app:layout_constraintVertical_bias="0.35" />
+
+    <Button
+        android:id="@+id/BtnFibonacci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="opFibonacci"
+        android:text="@string/fibonacci"
+        app:layout_constraintBottom_toTopOf="@+id/BtnLimpiar"
+        app:layout_constraintEnd_toStartOf="@+id/BtnFactorial"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/BtnPotencia"
+        app:layout_constraintTop_toBottomOf="@+id/TxtResultado1"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/BtnFactorial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="opFactorial"
+        android:text="@string/factorial"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/BtnFibonacci"
+        app:layout_constraintTop_toBottomOf="@+id/TxtResultado1" />
+
+    <Button
+        android:id="@+id/BtnPotencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="opPotencia"
+        android:text="@string/potencia"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/BtnFibonacci"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TxtResultado1"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/BtnLimpiar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="limpiar"
+        android:text="@string/limpiar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BtnFibonacci"
+        app:layout_constraintVertical_bias="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
