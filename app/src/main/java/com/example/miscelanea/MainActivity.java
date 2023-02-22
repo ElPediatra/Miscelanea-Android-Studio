@@ -30,21 +30,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void opFibonacci(View view) {
-        EditText et1 = (EditText) findViewById(R.id.txtOperando1);
-        TextView resultado = (TextView) findViewById(R.id.lblResultado);
-        int op1 = Integer.parseInt(et1.getText().toString());
+        operando1 = Integer.parseInt(numero1.getText().toString());
         String resul=new String("");
-        resul=fibonacci(op1);
-        resultado.setText(String.valueOf(resul));
+        resul=fibonacci(operando1);
+        resultado2.setText(String.valueOf(resul));
     }
 
     public void opFactorial(View view) {
-        EditText et1 = (EditText) findViewById(R.id.txtOperando1);
-        TextView resultado = (TextView) findViewById(R.id.lblResultado);
-        int op1 = Integer.parseInt(et1.getText().toString());
-        int resul;
-        resul=factorial(op1);
-        resultado.setText(String.valueOf(resul));
+        operando1 = Integer.parseInt(numero1.getText().toString());
+        resultado=factorial(operando1);
+        resultado2.setText(String.valueOf(resultado));
     }
 
     public void limpiar(View view){
@@ -52,4 +47,25 @@ public class MainActivity extends AppCompatActivity {
         numero1.setText("");
         numero2.setText("");
     }
+    public static String fibonacci(int n) {
+        int a = 0;
+        int b = 1;
+        int c;
+        String resul = new String(a + ", " + b + ", ");
+        for (int i = 2; i < n; i++) {
+            c = a + b;
+            resul += c + ", ";
+            a = b;
+            b = c;
+        }
+        return resul;
+    }
+    public static int factorial(int n) {
+        int result = 1;
+        for (int i = 1; i <= n; i++) {
+            result = result * i;
+        }
+        return result;
+    }
+
 }

@@ -3,6 +3,8 @@
     <string name="miscelanea_alberto">Miscelanea Alberto</string>
     <string name="operando1">Operando1</string>
     <string name="operando_2">Operando 2</string>
+    <string name="editTextNumber">0</string>
+    <string name="editTextNumber2">0</string>
     <string name="resultado">Resultado</string>
     <string name="Resultado2">0</string>
     <string name="fibonacci">Fibonacci</string>
