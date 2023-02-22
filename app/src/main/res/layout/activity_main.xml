@@ -27,6 +27,8 @@
         android:autofillHints=""
         android:ems="10"
         android:inputType="number"
+        android:text="0"
+        android:textAlignment="viewEnd"
         app:layout_constraintBottom_toTopOf="@+id/editTextNumber2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -42,6 +44,8 @@
         android:autofillHints=""
         android:ems="10"
         android:inputType="number"
+        android:text="0"
+        android:textAlignment="viewEnd"
         app:layout_constraintBottom_toTopOf="@+id/TxtResultado1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -81,7 +85,6 @@
         android:text="@string/resultado"
         app:layout_constraintBottom_toTopOf="@+id/BtnFibonacci"
         app:layout_constraintEnd_toStartOf="@+id/TxtResultado2"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumber2"
         app:layout_constraintVertical_bias="0.5" />
@@ -93,10 +96,9 @@
         android:text="@string/Resultado2"
         app:layout_constraintBottom_toTopOf="@+id/BtnFactorial"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/TxtResultado1"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumber2"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintVertical_bias="0.35" />
 
     <Button
         android:id="@+id/BtnFibonacci"
@@ -119,13 +121,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/BtnFibonacci"
-        app:layout_constraintTop_toBottomOf="@+id/TxtResultado2"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2"
+        app:layout_constraintVertical_bias="0.631" />
 
     <Button
         android:id="@+id/BtnPotencia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="opPotencia"
         android:text="@string/potencia"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/BtnFibonacci"
